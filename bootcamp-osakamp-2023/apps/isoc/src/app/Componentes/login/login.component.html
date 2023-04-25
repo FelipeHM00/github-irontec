@@ -1,0 +1,32 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4">
+      <div class="card p-4 shadow" >
+        <div class="card-body d-flex flex-column align-items-center">
+          <form class="login-box" (ngSubmit)="validate()" style="width: 100%;">
+            <h1 class="text-center mb-3">Irontec</h1>
+
+            <div class="form-group">
+              <label for="email"><i class="far fa-envelope fa-sm"></i>Email:</label>
+              <input type="email" id="email" name="email" [(ngModel)]="email" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label for="password" class="mt-3"><i class="fas fa-shield-alt"></i>Contraseña:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                [(ngModel)]="password"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="text-center mt-3">
+              <button type="submit" class="btn btn-custom btn-red mx-auto">Validar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

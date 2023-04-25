@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+/* Agregar Font Awesome a tu archivo CSS */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+/* Definir un estilo CSS y agregar una clase de Font Awesome */
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+  }

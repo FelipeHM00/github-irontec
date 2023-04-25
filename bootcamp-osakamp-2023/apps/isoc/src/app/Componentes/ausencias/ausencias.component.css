@@ -1,0 +1,30 @@
+#linea{
+    padding-top: 3vh;
+}
+.form-control{
+    background-color: #50e40b0f;
+}
+.btn-red {
+    background-color: #56912d;
+    color: white;
+  }
+  
+  .btn-red:hover {
+    background-color: #9ae465;
+    color:#56912d;
+  }
+  select {
+    
+    padding: 3px 2px;
+    margin-top: 18px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+  }
+  .ml-3{
+    display: flex;
+    justify-content: center;
+  }
+  

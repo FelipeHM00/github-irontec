@@ -1,0 +1,33 @@
+.header {
+    height: 60px; /* ajusta la altura del contenedor según sea necesario */
+  }
+
+  .header .d-flex {
+    height: 100%;
+  }
+
+  .header p {
+    margin: 0; /* elimina el margen predeterminado para el elemento <p> */
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: rgb(0 0 0);
+}
+.bi-clipboard-data:hover path {
+  transition: fill 0.2s ease-in-out;
+  fill: #56912d;
+}
+.nav-link:hover {
+  color: #56912d!important;
+}
+#logout:hover{
+  color: #ff3705!important;
+}
+.margen-derecha {
+  margin-right: 5px !important;
+}
+.texto-azul{
+  color:blue
+}
+.texto-rojo{
+  color:#ff3705
+}

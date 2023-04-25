@@ -1,0 +1,47 @@
+<div class="container">
+<h2 class="ml-3">Este es tu informe del Año {{yearSeleccionado}}</h2>
+
+<select name="year" id="year" [(ngModel)]="yearSeleccionado" (ngModelChange)="onValueChange()">
+    <option name="Selecciona year" placeholder="Selecciona un year" disabled ></option>
+    <option *ngFor="let year of yearElegido" [value]="year.valor">{{year.nombre}}</option>
+</select>
+<button style="--c:#E95A49" (click)="traerRegistros()" >Generar Informe</button>
+<table >
+    <tbody>
+        <tr >
+        <td style="width:100px" class="border-1">Fecha</td>
+
+        <td style="width:100px" class="border-1">Horario de Entrada</td>
+        
+        <td style="width:100px" class="border-1">Horario de salida</td>
+
+        <td style="width:100px" class="border-1">Ausencias</td>
+        
+        <td style="width:100px" class="border-1">Horas Trabajadas</td>
+
+    </tr>
+</tbody>
+</table>
+<table>
+    <tr *ngFor="let registro of datos">
+        <td style="width:100px" class="border-1">{{registro.year}}</td>
+        <td style="width:100px" class="border-1">{{registro.timeIn}}</td>
+        <td style="width:100px" class="border-1">{{registro.timeOut}}</td>
+        <td style="width:100px" class="border-1">{{registro.ausencia}}</td>
+        <td style="width:100px" class="border-1">{{registro.total | number:'1.2-2'}}</td>
+        
+    </tr>
+    <br>
+    <p>Resumen Por meses</p>
+    <br>
+    <tr *ngFor="let registro of mes">
+        <td style="width:100px" class="border-1">{{registro.nombre}}</td>
+        <td style="width:100px" ></td>
+        <td style="width:100px" ></td>
+        <td style="width:100px" ></td>
+        <td style="width:100px" class="border-1">{{registro.valor | number:'1.2-2'}}</td>
+        
+    </tr>
+
+</table>
+</div>

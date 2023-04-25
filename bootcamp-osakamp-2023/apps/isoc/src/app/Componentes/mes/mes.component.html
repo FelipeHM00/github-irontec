@@ -1,0 +1,42 @@
+<div class="container">
+<h2 class="ml-3">Este es tu informe del Mes de {{mesSeleccionado}}</h2>
+
+<select name="mes" id="mes" [(ngModel)]="mesSeleccionado" (ngModelChange)="onValueChange()">
+    <option name="Selecciona Mes" placeholder="Selecciona un mes" disabled ></option>
+    <option *ngFor="let mes of mesElegido" [value]="mes.valor">{{mes.nombre}}</option>
+</select>
+<button style="--c:#E95A49"(click)="traerRegistros()" >Generar Informe</button>
+<table >
+    <tbody>
+        <tr >
+        <td style="width:100px" class="border-1">Fecha</td>
+
+        <td style="width:100px" class="border-1">Horario de Entrada</td>
+        
+        <td style="width:100px" class="border-1">Horario de salida</td>
+
+        <td style="width:100px" class="border-1">Ausencias</td>
+        
+        <td style="width:100px" class="border-1">Horas Trabajadas</td>
+
+    </tr>
+</tbody>
+</table>
+<table>
+    <tr *ngFor="let registro of datos">
+        <td style="width:100px" class="border-1">{{registro.mes}}</td>
+        <td style="width:100px" class="border-1">{{registro.timeIn}}</td>
+        <td style="width:100px" class="border-1">{{registro.timeOut}}</td>
+        <td style="width:100px" class="border-1">{{registro.ausencia}}</td>
+        <td style="width:100px" class="border-1">{{registro.total | number:'1.2-2'}}</td>
+     </tr>
+     <tr>
+        <td style="width:100px"></td>
+        <td style="width:100px"></td>
+        <td style="width:100px"></td>
+        <td style="width:100px"></td>
+        <td style="width:100px" class="border-1">{{sum}}</td>
+     </tr>
+
+</table>
+</div>

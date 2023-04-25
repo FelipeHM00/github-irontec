@@ -1,0 +1,76 @@
+select,
+button {
+  margin: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+td {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+button {
+    --c:  #13c6c9  /* the color*/
+    
+    box-shadow: 0 0 0 .1em inset var(--c); 
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background: 
+      var(--_g) calc(var(--_p,0%) - 100%) 0%,
+      var(--_g) calc(200% - var(--_p,0%)) 0%,
+      var(--_g) calc(var(--_p,0%) - 100%) 100%,
+      var(--_g) calc(200% - var(--_p,0%)) 100%;
+    background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+    outline-offset: .1em;
+    transition: background-size .4s, background-position 0s .4s;
+  }
+  button:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+  }
+  button:active {
+    box-shadow: 0 0 9e9q inset #0009; 
+    background-color: var(--c);
+    color: #fff;
+  }
+  
+  
+  
+  
+  button {
+    
+    font-size: 1rem;
+    cursor: pointer;
+    padding: .1em .6em;
+    
+    border: none;
+  }
+  .ml-3{
+    margin-left: 20px ;
+    margin-bottom: 20px;
+  }
+  select {
+    
+    padding: 3px 2px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    width: 115px;
+  }
+  @media screen and (max-width: 444px) {
+    td:nth-child(4), th:nth-child(4) {
+      display: none;
+    }
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
